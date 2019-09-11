@@ -1,8 +1,12 @@
 
 # guides and installations
 
-Yarn or Npm
-[ir](/yarn_or_npm/README.md)
+## Yarn or Npm
 
-Webpack
-[ir](/webpack/README.md)
+Pequeños pasos a seguir para entender y usar Yarn o Npm ->
+[ver](/yarn_or_npm/README.md)
+
+## Webpack
+
+Conoce un poco como funciona WebPack ->
+[ver](/webpack/README.md)
