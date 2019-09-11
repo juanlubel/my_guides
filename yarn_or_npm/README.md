@@ -1,6 +1,7 @@
 ---
 redirect_from: "/my_guides/"
 ---
+[BACK](../README.md)
 
 # INSTALL YARN OR NPM
 
