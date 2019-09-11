@@ -1,3 +1,7 @@
+---
+redirect_from: "/my_guides/"
+---
+
 # WEBPACK
 
 ## Su función

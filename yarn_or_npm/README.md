@@ -1,3 +1,7 @@
+---
+redirect_from: "/my_guides/"
+---
+
 # INSTALL YARN OR NPM
 
 ***Que funcion tienen?***
