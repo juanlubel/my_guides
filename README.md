@@ -2,7 +2,7 @@
 # guides and installations
 
 Yarn or Npm
-[a link](https://github.com/juanlubel/my_guides/tree/master/yarn_or_npm/readme.md)
+[Yarn or Npm](https://github.com/juanlubel/my_guides/tree/master/yarn_or_npm/)
 
 Webpack
-[a link](https://github.com/juanlubel/my_guides/tree/master/webpack/readme.md)
+[Webpack](https://github.com/juanlubel/my_guides/tree/master/webpack/)
