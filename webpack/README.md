@@ -6,7 +6,7 @@ redirect_from: "/my_guides/"
 
 [BACK](../README.md)
 
-## Su función
+***Su función***
 
 la función de webpack sera agrupar y conectar todos nuestros HTML, CSS y JS documentos en uno.
 
