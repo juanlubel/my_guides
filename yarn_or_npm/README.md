@@ -1,9 +1,10 @@
 ---
 redirect_from: "/my_guides/"
 ---
-[BACK](../README.md)
 
 # INSTALL YARN OR NPM
+
+[BACK](../README.md)
 
 ***Que funcion tienen?***
 

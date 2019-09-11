@@ -1,5 +1,5 @@
 
-# guides and installations
+# Guides and Instalation
 
 ## Yarn or Npm
 
