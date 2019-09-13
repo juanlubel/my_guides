@@ -80,9 +80,9 @@ output => ruta del archivo que se creara con todos los modulos.
         path: __dirname + /build,
         filemane: bundle.js
     }
-con la configuracion adecuada, sera webpack el que añadira bundle.js al index.html. Pero tambien se puede añadir manualmente en un index.html que estara en la misma carpeta /build.
+Con la configuración adecuada, sera webpack el que añadira bundle.js al index.html. Pero tambien se puede añadir manualmente en un index.html que estara en la misma carpeta /build.
 
-## EJECUCION
+## Ejecución
 
 Necesitaremos el siguiente comando
 ```
@@ -90,4 +90,4 @@ webpack --watch --color
 ```
 > --watch generara automaticamente el bundle.js (en nuestro ejemplo) cada vez que se salven los cambios
 
-Este comando lo puedes insertar en tu package.json dentro de scripts para abreviar. Ver tutorial [YARN OR NPM](/yarn_or_npm/README.md)
+Este comando lo puedes insertar en tu package.json dentro de scripts para abreviar. Ver tutorial [YARN OR NPM](../yarn_or_npm/README.md)
