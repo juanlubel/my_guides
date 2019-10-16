@@ -1,7 +1,3 @@
----
-redirect_from: "/my_guides/"
----
-
 # INSTALL YARN OR NPM
 
 [BACK](../README.md)
@@ -25,7 +21,7 @@ redirect_from: "/my_guides/"
 * /node_modules (ambos)
   > los módulos instalados aquí ya los podrás incluir en tu .js con:
 
-        > var my_package = require('package_name');
+        > const my_package = require('package_name');
 
 * package.json (ambos)
 
