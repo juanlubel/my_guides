@@ -1,7 +1,3 @@
----
-redirect_from: "/my_guides/"
----
-
 # WEBPACK
 
 [BACK](../README.md)
@@ -13,6 +9,7 @@ la función de webpack sera agrupar y conectar todos nuestros HTML, CSS y JS doc
 Nos brinda un servidor de desarollo que se ejecutar en vivo y actualiza los cambios segundo vamos escribidiendo y guardando el codigo en nuestro editor o IDE.
 
 Despues de la configuración adecuada, podremos
+
 ```
 // saludo/index.js
 

@@ -61,8 +61,117 @@ sudo gitlab-ctl reconfigure
 
 ### Impedir que usuarios nuevos puedan modificar su identificador
 
+Esto lo tendremos que modificar en un fichero de gitlab
+
+    /etc/gitlab/gitlab.rb
+
+Buscaremos Gitlad user privileges, eliminaremos el # de la segundo opción y la cambiaremos a false, debe quedar así:
+
+![](privileges.png)
+
 ### Modificar el tiempo de expiración de la sesión
 
+Esta configuración la modificaremos desde en entorno visual.
+
+Accederemos a `Admin Area -> Settings -> General -> Account and limit ` y modificamos Session duration.
+
+![](sessionduration.png)
+
+### Gestion por API - token TxinQ17fyGFgD4S8LCDH
+
+Generamos un token desde nuestra configuración de usuario.
+
+![](createtoken.png)
+
+Ahora con ese token, podremos acceder por Postman, por ejemplo.
+
+Detallar ejemplos de procesos (vía llamadas a la API) como:
+
+- Alta
+    - POST /api/v4/users
+    ```json
+    {
+        "email": "test@test.com",
+        "name": "test",
+        "password": "testtest",
+        "username": "test"
+    } 
+    ```
+- Modificación
+    - PUT /api/v4/users/:id
+- Borrar
+    - DELETE /api/v4/users/:id
+
+<br>
+
+- Bloqueo
+    - POST /api/v4/users/:id/block
+- Desbloqueo
+    - POST /api/v4/users/:id/unblock
+
+<br>
+
+- Establecer usuario como administrador.
+    - PUT /api/v4/users/2
+    ```json
+    {
+	    "admin" : true
+    }
+    ```
+
+<br>
+
+- Creación de proyectos.
+    - POST /api/v4/projects
+    ```json
+    {
+        "name" : "testProject"
+    }
+    ```
+
+<br>
 
 
+### Personalización
 
+Accederemos a traves de `Admin area -> Appearance`
+
+Realizar labores de customización como por ejemplo: 
+
+* Modificar la página de creación de un nuevo proyecto
+
+![](newproject.png)
+
+* Modificar el logo y la descripción de la pantalla de login.
+
+![](logo.png)
+
+* Modificar el favicon de gitlab. 
+
+![](favicon.png)
+
+### Importar
+
+Detallar el proceso para poder importar proyectos de GitHub a nuestro
+GitLab tanto por pantalla como utilizando la API.
+
+> Entorno visual
+
+Accedemos a NEW PROJECT
+
+![](newprojectbutton.png)
+
+Y en la ventana que nos aparece seleccionamos la pestaña de Import projecto
+
+![](importproject.png)
+
+> URL (postman)
+
+* POST /api/v4/projects
+
+```json
+{
+    "name": "importProject",
+    "import_url": "https://github.com/juanlubel/git-flow-nodeJs"
+}
+```
