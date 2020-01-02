@@ -36,9 +36,8 @@ location ~ .php$ {
 
 Y tendremos que hacer caso a las indicaciones de nginx:
 
-# Add index.php to the list if you are using PHP
-
-   index index.html index.htm index.nginx-debian.html index.php;
+    # Add index.php to the list if you are using PHP
+    index index.html index.htm index.nginx-debian.html index.php;
 
 Y añadir index.php para que lo ejecute si no encuentra ninguna de los anteriores.
 
