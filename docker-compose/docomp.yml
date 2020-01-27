@@ -1,0 +1,55 @@
+version: "3.3"
+
+services:
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.2
+    container_name: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - "network.host=0.0.0.0"
+      # The host address to publish for HTTP clients to connect to
+      - "http.host=0.0.0.0"
+      # The host address to publish for nodes in the cluster to connect to
+      - "transport.host=0.0.0.0"
+      - "ES_JAVA_OPTS=-Xmn256m -Xms256m"
+    volumes:
+      - elastik:/usr/share/elasticsearch/data
+    networks:
+      - practica_network
+    # Configure a check that’s run to determine whether or not containers for this service are “healthy”. See the docs for the HEALTHCHECK Dockerfile instruction for details on how healthchecks work.
+    healthcheck:
+      test: curl -f https://localhost:9200
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    # Override the default ulimits for a container. You can either specify a single limit as an integer or soft/hard limits as a mapping.
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+  mongo:
+    image: mongo:3
+    restart: always
+
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+    networks:
+      - practica_network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet 1
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+networks:
+  practica_network:
+
+
+volumes:
+  elastik:
+  mongo:
